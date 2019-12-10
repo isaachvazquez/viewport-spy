@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.ViewportSpy {
+  height: 100vh;
+  width: 100vw;
+  border: 10px dashed #2d2d2d;
+  position: relative;
+  overflow: scroll;
+}
+
+.intersection-container.in-viewport {
+  border: 10px dashed greenyellow;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  background-color: #efefef;
+  height: 90vh;
+}
+
+section[data-observe-intersection] {
+  background-color: #2d2d2d;
+}
+
+section.in-viewport {
+  background-color: greenyellow;
+}
+
+section.visited {
+  color: orange;
+}

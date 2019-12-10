@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Viewport Spy</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <h1>Viewport Spy</h1>
+  <div class="ViewportSpy">
+    <section>1</section>
+    <section>2</section>
+    <section data-observe-intersection="true" data-in-view="0" data-trigger-points="">3</section>
+    <section>4</section>
+    <section data-observe-intersection="true" data-in-view="0.5" data-trigger-points="0.5">5</section>
+    <section>6</section>
+    <section data-observe-intersection="true" data-in-view="0.99" data-trigger-points="all">7</section>
+    <section>8</section>
+    <section>9</section>
+    <section>10</section>
+  </div>
+
+  <script src="src/viewport-spy.js"></script>
+  <script>
+    const myViewportSpy = new ViewportSpy();
+    myViewportSpy.init({});
+
+    // document.querySelector('body').addEventListener('VSevent', (e) => {
+    //   console.log(e.detail.element);
+    // });
+  </script>
+</body>
+</html>
